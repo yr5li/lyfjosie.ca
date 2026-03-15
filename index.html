@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A minimal portfolio of souvenirs and locations, built as a static website for GitHub Pages."
+    />
+    <title>Fur Josie</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="sidebar-collapsed">
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-inner">
+          <div class="sidebar-top">
+            <button
+              class="sidebar-toggle"
+              id="sidebar-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="sidebar"
+              aria-label="Open sidebar"
+            >
+              <img class="sidebar-toggle-image" id="sidebar-toggle-image" alt="" hidden />
+              <span></span>
+              <span></span>
+            </button>
+
+            <button
+              class="home-shortcut is-active"
+              id="home-button"
+              data-tab="home"
+              type="button"
+              aria-label="Home"
+            >
+              <span aria-hidden="true">&#x1F382;</span>
+            </button>
+
+            <div class="sidebar-brand">
+              <div class="sidebar-brand-head">
+                <img class="sidebar-brand-image" id="sidebar-brand-image" alt="" hidden />
+                <div>
+                  <p class="sidebar-kicker">Souvenirs</p>
+                  <h1 id="sidebar-brand-name">Fur Josie</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav" aria-label="Sections">
+            <button class="nav-tab" id="locations-tab" data-tab="locations" type="button">
+              <span class="nav-tab-copy">
+                <strong>Our locations</strong>
+              </span>
+            </button>
+
+            <button class="nav-tab" id="about-tab" data-tab="about" type="button">
+              <span class="nav-tab-copy">
+                <strong>About</strong>
+              </span>
+            </button>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <section class="panel-section home-panel is-active" id="home-panel" aria-labelledby="home-button">
+          <div class="home-message-wrap">
+            <p class="home-message" id="home-message">Happy birthday</p>
+          </div>
+        </section>
+
+        <section class="panel-section locations-panel" id="locations-panel" aria-labelledby="locations-tab">
+          <header class="section-header">
+            <div>
+              <p class="section-kicker">Our locations</p>
+              <h2 class="locations-heading" id="locations-heading">在地图上写下一本过去的日记</h2>
+            </div>
+          </header>
+
+          <div class="gallery-grid" id="gallery-grid"></div>
+        </section>
+
+        <section class="panel-section about-panel" id="about-panel" aria-labelledby="about-tab">
+          <div class="about-blank"></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox-backdrop" data-close="lightbox" type="button" aria-label="Close"></button>
+      <section class="lightbox-dialog" aria-modal="true" role="dialog" aria-labelledby="detail-title">
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close">
+          Close
+        </button>
+
+        <div class="lightbox-media-wrap">
+          <button class="lightbox-nav lightbox-nav-prev" id="lightbox-prev" type="button" aria-label="Previous memory">
+            <span aria-hidden="true">&larr;</span>
+          </button>
+          <img class="lightbox-image" id="detail-image" alt="" />
+          <button class="lightbox-nav lightbox-nav-next" id="lightbox-next" type="button" aria-label="Next memory">
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+
+        <aside class="lightbox-meta">
+          <p class="detail-kicker" id="detail-city-name"></p>
+          <h2 id="detail-title"></h2>
+          <p class="detail-description" id="detail-description"></p>
+
+          <dl class="detail-facts">
+            <div>
+              <dt>Coordinates</dt>
+              <dd>
+                <span id="detail-coordinates"></span>
+                <a class="maps-link" id="detail-map-link" href="#" target="_blank" rel="noreferrer">
+                  Open in Google Maps
+                </a>
+              </dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+    </div>
+
+    <script src="locations.js"></script>
+    <script src="script.js"></script>
+  </body>
+  </html>
