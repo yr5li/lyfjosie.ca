@@ -8,16 +8,16 @@
       content="A minimal portfolio of souvenirs and locations, built as a static website for GitHub Pages."
     />
     <title>Fur Josie</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" id="site-favicon" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260316q" />
   </head>
-  <body class="sidebar-collapsed">
+  <body class="sidebar-collapsed sidebar-content-hidden">
     <div class="app-shell">
       <aside class="sidebar" id="sidebar">
         <div class="sidebar-inner">
@@ -35,6 +35,31 @@
               <span></span>
             </button>
 
+            <div class="sidebar-brand">
+              <div class="sidebar-brand-head">
+                <img class="sidebar-brand-image" id="sidebar-brand-image" alt="" hidden />
+                <div>
+                  <h1 id="sidebar-brand-name">Fur Josie</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <nav class="sidebar-nav" aria-label="Sections">
+            <button class="nav-tab nav-tab-icon" id="locations-tab" data-tab="locations" type="button" aria-label="Locations">
+              <span class="nav-tab-copy">
+                <strong aria-hidden="true">&#x1F463;</strong>
+              </span>
+            </button>
+          </nav>
+
+          <div class="sidebar-footer">
+            <button class="nav-tab nav-tab-footer" id="about-tab" data-tab="about" type="button">
+              <span class="nav-tab-copy">
+                <strong>About</strong>
+              </span>
+            </button>
+
             <button
               class="home-shortcut is-active"
               id="home-button"
@@ -44,31 +69,7 @@
             >
               <span aria-hidden="true">&#x1F382;</span>
             </button>
-
-            <div class="sidebar-brand">
-              <div class="sidebar-brand-head">
-                <img class="sidebar-brand-image" id="sidebar-brand-image" alt="" hidden />
-                <div>
-                  <p class="sidebar-kicker">Souvenirs</p>
-                  <h1 id="sidebar-brand-name">Fur Josie</h1>
-                </div>
-              </div>
-            </div>
           </div>
-
-          <nav class="sidebar-nav" aria-label="Sections">
-            <button class="nav-tab" id="locations-tab" data-tab="locations" type="button">
-              <span class="nav-tab-copy">
-                <strong>Our locations</strong>
-              </span>
-            </button>
-
-            <button class="nav-tab" id="about-tab" data-tab="about" type="button">
-              <span class="nav-tab-copy">
-                <strong>About</strong>
-              </span>
-            </button>
-          </nav>
         </div>
       </aside>
 
@@ -82,7 +83,6 @@
         <section class="panel-section locations-panel" id="locations-panel" aria-labelledby="locations-tab">
           <header class="section-header">
             <div>
-              <p class="section-kicker">Our locations</p>
               <h2 class="locations-heading" id="locations-heading">在地图上写下一本过去的日记</h2>
             </div>
           </header>
@@ -100,7 +100,8 @@
       <button class="lightbox-backdrop" data-close="lightbox" type="button" aria-label="Close"></button>
       <section class="lightbox-dialog" aria-modal="true" role="dialog" aria-labelledby="detail-title">
         <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close">
-          Close
+          <img class="lightbox-close-image" id="lightbox-close-image" alt="" hidden />
+          <span class="lightbox-close-copy" id="lightbox-close-copy">Close</span>
         </button>
 
         <div class="lightbox-media-wrap">
@@ -133,7 +134,7 @@
       </section>
     </div>
 
-    <script src="locations.js"></script>
-    <script src="script.js"></script>
+    <script src="locations.js?v=20260316q"></script>
+    <script src="script.js?v=20260316q"></script>
   </body>
   </html>

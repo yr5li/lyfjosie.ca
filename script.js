@@ -1,10 +1,25 @@
 const siteConfig = typeof window.siteConfig === "object" && window.siteConfig ? window.siteConfig : {};
-const locations = Array.isArray(window.locationEntries) ? window.locationEntries : [];
+const baseLocations = Array.isArray(window.locationEntries) ? window.locationEntries : [];
+
+function shuffleLocations(entries) {
+  const shuffled = [...entries];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+  return shuffled;
+}
+
+const locations = shuffleLocations(baseLocations);
 
 const state = {
   activeTab: "home",
   activeIndex: locations.length > 0 ? 0 : -1,
 };
+const SIDEBAR_EXPAND_MS = 220;
+const SIDEBAR_FADE_MS = 130;
+let sidebarTransitionTimer = 0;
+const pageUrl = new URL(window.location.href);
 
 const navTabs = Array.from(document.querySelectorAll(".nav-tab"));
 const panels = {
@@ -12,6 +27,7 @@ const panels = {
   locations: document.getElementById("locations-panel"),
   about: document.getElementById("about-panel"),
 };
+const siteFavicon = document.getElementById("site-favicon");
 const galleryGrid = document.getElementById("gallery-grid");
 const sidebarToggle = document.getElementById("sidebar-toggle");
 const sidebarToggleImage = document.getElementById("sidebar-toggle-image");
@@ -22,6 +38,8 @@ const sidebarBrandImage = document.getElementById("sidebar-brand-image");
 const locationsHeading = document.getElementById("locations-heading");
 const lightbox = document.getElementById("lightbox");
 const lightboxClose = document.getElementById("lightbox-close");
+const lightboxCloseImage = document.getElementById("lightbox-close-image");
+const lightboxCloseCopy = document.getElementById("lightbox-close-copy");
 const lightboxPrev = document.getElementById("lightbox-prev");
 const lightboxNext = document.getElementById("lightbox-next");
 const detailImage = document.getElementById("detail-image");
@@ -30,6 +48,38 @@ const detailTitle = document.getElementById("detail-title");
 const detailDescription = document.getElementById("detail-description");
 const detailCoordinates = document.getElementById("detail-coordinates");
 const detailMapLink = document.getElementById("detail-map-link");
+
+function getFaviconType(src) {
+  if (src.endsWith(".png")) {
+    return "image/png";
+  }
+  if (src.endsWith(".jpg") || src.endsWith(".jpeg")) {
+    return "image/jpeg";
+  }
+  if (src.endsWith(".ico")) {
+    return "image/x-icon";
+  }
+  if (src.endsWith(".svg")) {
+    return "image/svg+xml";
+  }
+  return "";
+}
+
+function escapeHtml(value) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function setMultilineText(node, text) {
+  node.innerHTML = text
+    .split("\n")
+    .map((line) => `<span class="locations-heading-line">${escapeHtml(line)}</span>`)
+    .join("");
+}
 
 function applySiteConfig() {
   const siteName = typeof siteConfig.siteName === "string" ? siteConfig.siteName : "Fur Josie";
@@ -42,6 +92,22 @@ function applySiteConfig() {
 
   document.title = siteName;
 
+  if (
+    siteFavicon instanceof HTMLLinkElement &&
+    typeof siteConfig.faviconImage === "object" &&
+    siteConfig.faviconImage &&
+    typeof siteConfig.faviconImage.src === "string" &&
+    siteConfig.faviconImage.src.trim().length > 0
+  ) {
+    siteFavicon.href = siteConfig.faviconImage.src;
+    const iconType = getFaviconType(siteConfig.faviconImage.src.toLowerCase());
+    if (iconType) {
+      siteFavicon.type = iconType;
+    } else {
+      siteFavicon.removeAttribute("type");
+    }
+  }
+
   if (sidebarBrandName) {
     sidebarBrandName.textContent = siteName;
   }
@@ -51,7 +117,23 @@ function applySiteConfig() {
   }
 
   if (locationsHeading) {
-    locationsHeading.textContent = headingText;
+    setMultilineText(locationsHeading, headingText);
+  }
+
+  if (
+    lightboxCloseImage &&
+    lightboxCloseCopy &&
+    typeof siteConfig.lightboxCloseImage === "object" &&
+    siteConfig.lightboxCloseImage &&
+    typeof siteConfig.lightboxCloseImage.src === "string" &&
+    siteConfig.lightboxCloseImage.src.trim().length > 0
+  ) {
+    lightboxCloseImage.src = siteConfig.lightboxCloseImage.src;
+    lightboxCloseImage.alt =
+      typeof siteConfig.lightboxCloseImage.alt === "string" ? siteConfig.lightboxCloseImage.alt : "Close";
+    lightboxCloseImage.hidden = false;
+    lightboxCloseCopy.hidden = true;
+    lightboxClose?.classList.add("has-custom-image");
   }
 
   if (
@@ -198,9 +280,64 @@ function navigateLocation(delta) {
   renderLocation(nextIndex);
 }
 
+function clearSidebarTransitionTimer() {
+  if (sidebarTransitionTimer) {
+    window.clearTimeout(sidebarTransitionTimer);
+    sidebarTransitionTimer = 0;
+  }
+}
+
+function setSidebarExpanded(expanded) {
+  clearSidebarTransitionTimer();
+
+  if (expanded) {
+    document.body.classList.remove("sidebar-collapsed");
+    sidebarToggle?.setAttribute("aria-expanded", "true");
+    sidebarToggle?.setAttribute("aria-label", "Close sidebar");
+    sidebarTransitionTimer = window.setTimeout(() => {
+      document.body.classList.remove("sidebar-content-hidden");
+      sidebarTransitionTimer = 0;
+    }, SIDEBAR_EXPAND_MS);
+    return;
+  }
+
+  document.body.classList.add("sidebar-content-hidden");
+  sidebarToggle?.setAttribute("aria-expanded", "false");
+  sidebarToggle?.setAttribute("aria-label", "Open sidebar");
+  sidebarTransitionTimer = window.setTimeout(() => {
+    document.body.classList.add("sidebar-collapsed");
+    sidebarTransitionTimer = 0;
+  }, SIDEBAR_FADE_MS);
+}
+
+function applyInitialUiFromUrl() {
+  const sidebarParam = pageUrl.searchParams.get("sidebar");
+  const tabParam = pageUrl.searchParams.get("tab");
+  const lightboxParam = pageUrl.searchParams.get("lightbox");
+
+  if (sidebarParam === "open") {
+    clearSidebarTransitionTimer();
+    document.body.classList.remove("sidebar-collapsed", "sidebar-content-hidden");
+    sidebarToggle?.setAttribute("aria-expanded", "true");
+    sidebarToggle?.setAttribute("aria-label", "Close sidebar");
+  }
+
+  if (tabParam && Object.hasOwn(panels, tabParam)) {
+    setActiveTab(tabParam);
+  }
+
+  if (lightboxParam !== null) {
+    const index = Number.parseInt(lightboxParam, 10);
+    if (!Number.isNaN(index)) {
+      openLocation(index);
+    }
+  }
+}
+
 applySiteConfig();
 renderGallery();
 setActiveTab("home");
+applyInitialUiFromUrl();
 
 if (homeButton) {
   homeButton.addEventListener("click", () => setActiveTab("home"));
@@ -217,10 +354,8 @@ for (const tab of navTabs) {
 
 if (sidebarToggle) {
   sidebarToggle.addEventListener("click", () => {
-    const collapsed = document.body.classList.toggle("sidebar-collapsed");
-    const expanded = !collapsed;
-    sidebarToggle.setAttribute("aria-expanded", String(expanded));
-    sidebarToggle.setAttribute("aria-label", expanded ? "Close sidebar" : "Open sidebar");
+    const shouldExpand = document.body.classList.contains("sidebar-collapsed");
+    setSidebarExpanded(shouldExpand);
   });
 }
 

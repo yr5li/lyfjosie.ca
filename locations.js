@@ -1,10 +1,17 @@
 window.siteConfig = {
   siteName: "Fur Josie",
   homeHeadline: "Happy birthday",
-  locationsHeading: "在地图上写下一本过去的日记",
+  locationsHeading: "在地图上写下\n一本过去的日记",
+  faviconImage: {
+    src: "images/division-bell.jpg",
+  },
   sidebarToggleImage: {
-    src: "",
+    src: "images/sidebar-drawer.png",
     alt: "Open or close sidebar",
+  },
+  lightboxCloseImage: {
+    src: "images/capybara.webp",
+    alt: "Close",
   },
   sidebarBrandImage: {
     src: "",
