@@ -15,22 +15,32 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260316q" />
+    <link rel="preload" as="image" href="images/sidebar-drawer.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="images/home-sunrise-blur.webp" fetchpriority="high" />
+    <link rel="stylesheet" href="styles.css?v=20260317h" />
   </head>
   <body class="sidebar-collapsed sidebar-content-hidden">
+    <button class="sidebar-overlay" id="sidebar-overlay" type="button" aria-label="Close sidebar"></button>
     <div class="app-shell">
       <aside class="sidebar" id="sidebar">
         <div class="sidebar-inner">
           <div class="sidebar-top">
             <button
-              class="sidebar-toggle"
+              class="sidebar-toggle has-custom-image"
               id="sidebar-toggle"
               type="button"
               aria-expanded="false"
               aria-controls="sidebar"
               aria-label="Open sidebar"
             >
-              <img class="sidebar-toggle-image" id="sidebar-toggle-image" alt="" hidden />
+              <img
+                class="sidebar-toggle-image"
+                id="sidebar-toggle-image"
+                src="images/sidebar-drawer.webp"
+                alt="Open or close sidebar"
+                decoding="async"
+                fetchpriority="high"
+              />
               <span></span>
               <span></span>
             </button>
@@ -67,7 +77,7 @@
               type="button"
               aria-label="Home"
             >
-              <span aria-hidden="true">&#x1F382;</span>
+              <span aria-hidden="true">27</span>
             </button>
           </div>
         </div>
@@ -134,7 +144,17 @@
       </section>
     </div>
 
-    <script src="locations.js?v=20260316q"></script>
-    <script src="script.js?v=20260316q"></script>
+    <div class="image-viewer" id="image-viewer" hidden>
+      <button class="image-viewer-backdrop" data-close="image-viewer" type="button" aria-label="Close fullscreen image"></button>
+      <section class="image-viewer-dialog" aria-modal="true" role="dialog" aria-label="Fullscreen image">
+        <button class="image-viewer-close" id="image-viewer-close" type="button" aria-label="Close fullscreen image">
+          <img class="image-viewer-close-image" id="image-viewer-close-image" alt="" hidden />
+        </button>
+        <img class="image-viewer-image" id="image-viewer-image" alt="" />
+      </section>
+    </div>
+
+    <script src="locations.js?v=20260317h"></script>
+    <script src="script.js?v=20260317h"></script>
   </body>
   </html>

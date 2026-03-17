@@ -1,5 +1,6 @@
 const siteConfig = typeof window.siteConfig === "object" && window.siteConfig ? window.siteConfig : {};
 const baseLocations = Array.isArray(window.locationEntries) ? window.locationEntries : [];
+const galleryImagePreloads = [];
 
 function shuffleLocations(entries) {
   const shuffled = [...entries];
@@ -29,6 +30,7 @@ const panels = {
 };
 const siteFavicon = document.getElementById("site-favicon");
 const galleryGrid = document.getElementById("gallery-grid");
+const sidebarOverlay = document.getElementById("sidebar-overlay");
 const sidebarToggle = document.getElementById("sidebar-toggle");
 const sidebarToggleImage = document.getElementById("sidebar-toggle-image");
 const homeButton = document.getElementById("home-button");
@@ -48,6 +50,10 @@ const detailTitle = document.getElementById("detail-title");
 const detailDescription = document.getElementById("detail-description");
 const detailCoordinates = document.getElementById("detail-coordinates");
 const detailMapLink = document.getElementById("detail-map-link");
+const imageViewer = document.getElementById("image-viewer");
+const imageViewerClose = document.getElementById("image-viewer-close");
+const imageViewerCloseImage = document.getElementById("image-viewer-close-image");
+const imageViewerImage = document.getElementById("image-viewer-image");
 
 function getFaviconType(src) {
   if (src.endsWith(".png")) {
@@ -137,6 +143,22 @@ function applySiteConfig() {
   }
 
   if (
+    imageViewerCloseImage &&
+    typeof siteConfig.fullscreenCloseImage === "object" &&
+    siteConfig.fullscreenCloseImage &&
+    typeof siteConfig.fullscreenCloseImage.src === "string" &&
+    siteConfig.fullscreenCloseImage.src.trim().length > 0
+  ) {
+    imageViewerCloseImage.src = siteConfig.fullscreenCloseImage.src;
+    imageViewerCloseImage.alt =
+      typeof siteConfig.fullscreenCloseImage.alt === "string"
+        ? siteConfig.fullscreenCloseImage.alt
+        : "Close fullscreen image";
+    imageViewerCloseImage.hidden = false;
+    imageViewerClose?.classList.add("has-custom-image");
+  }
+
+  if (
     sidebarToggle &&
     sidebarToggleImage &&
     typeof siteConfig.sidebarToggleImage === "object" &&
@@ -183,11 +205,27 @@ function renderGallery() {
     card.setAttribute("aria-label", `Open ${location.title}`);
     card.innerHTML = `
       <span class="location-card-frame">
-        <img src="${location.image.src}" alt="${location.image.alt}">
+        <img src="${location.image.src}" alt="${location.image.alt}" decoding="async">
       </span>
     `;
     card.addEventListener("click", () => openLocation(index));
     galleryGrid.appendChild(card);
+  }
+}
+
+function preloadGalleryImages() {
+  galleryImagePreloads.length = 0;
+
+  for (const [index, location] of locations.entries()) {
+    if (!location?.image?.src) {
+      continue;
+    }
+
+    const image = new Image();
+    image.decoding = "async";
+    image.fetchPriority = index < 8 ? "high" : "low";
+    image.src = location.image.src;
+    galleryImagePreloads.push(image);
   }
 }
 
@@ -221,6 +259,8 @@ function setActiveTab(tabId) {
     }
     panelNode.classList.toggle("is-active", panelId === tabId);
   }
+
+  document.body.dataset.activeTab = tabId;
 }
 
 function renderLocation(index) {
@@ -245,6 +285,10 @@ function renderLocation(index) {
   detailDescription.textContent = location.description;
   detailCoordinates.textContent = location.coordinates;
   detailMapLink.href = location.googleMapsLink;
+  if (imageViewerImage) {
+    imageViewerImage.src = location.image.src;
+    imageViewerImage.alt = location.image.alt;
+  }
   updateLightboxNav();
 }
 
@@ -263,12 +307,37 @@ function openLocation(index) {
 }
 
 function closeLocation() {
+  closeImageViewer();
   if (!lightbox) {
     return;
   }
 
   lightbox.hidden = true;
   document.body.classList.remove("is-modal-open");
+}
+
+function openImageViewer() {
+  if (!imageViewer || state.activeIndex < 0 || !locations[state.activeIndex]) {
+    return;
+  }
+
+  const location = locations[state.activeIndex];
+  if (imageViewerImage) {
+    imageViewerImage.src = location.image.src;
+    imageViewerImage.alt = location.image.alt;
+  }
+
+  imageViewer.hidden = false;
+  document.body.classList.add("is-image-viewer-open");
+}
+
+function closeImageViewer() {
+  if (!imageViewer) {
+    return;
+  }
+
+  imageViewer.hidden = true;
+  document.body.classList.remove("is-image-viewer-open");
 }
 
 function navigateLocation(delta) {
@@ -339,6 +408,10 @@ renderGallery();
 setActiveTab("home");
 applyInitialUiFromUrl();
 
+window.requestAnimationFrame(() => {
+  preloadGalleryImages();
+});
+
 if (homeButton) {
   homeButton.addEventListener("click", () => setActiveTab("home"));
 }
@@ -359,8 +432,20 @@ if (sidebarToggle) {
   });
 }
 
+if (sidebarOverlay) {
+  sidebarOverlay.addEventListener("click", () => {
+    if (!document.body.classList.contains("sidebar-collapsed")) {
+      setSidebarExpanded(false);
+    }
+  });
+}
+
 if (lightboxClose) {
   lightboxClose.addEventListener("click", closeLocation);
+}
+
+if (detailImage) {
+  detailImage.addEventListener("click", openImageViewer);
 }
 
 if (lightboxPrev) {
@@ -383,7 +468,28 @@ if (lightbox) {
   });
 }
 
+if (imageViewerClose) {
+  imageViewerClose.addEventListener("click", closeImageViewer);
+}
+
+if (imageViewer) {
+  imageViewer.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) {
+      return;
+    }
+    if (target.dataset.close === "image-viewer") {
+      closeImageViewer();
+    }
+  });
+}
+
 document.addEventListener("keydown", (event) => {
+  if (imageViewer?.hidden === false && event.key === "Escape") {
+    closeImageViewer();
+    return;
+  }
+
   if (lightbox?.hidden !== false) {
     return;
   }
