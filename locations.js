@@ -40,7 +40,7 @@ window.locationEntries = [
   {
     cityName: "Toronto",
     title: "Moccasin Trail Park",
-    description: "那天晚上一路跌跌撞撞，莫名其妙地把DAZR882摸黑开到大自然里去了。",
+    description: "那天晚上一路跌跌撞撞，莫名其妙地把DAZR882摸黑开进大自然里了。",
     googleMapsLink: "https://maps.app.goo.gl/ChsmM8as2bx2TZyz9?g_st=ic",
     image: {
       src: `images/photos/02.webp?v=${galleryAssetVersion}`,
@@ -92,7 +92,7 @@ window.locationEntries = [
     title: "Alpine Centre",
     description:
       "这是那天看日食的停车场。日食长啥样记不太清了，但依然记得那天有个老头儿急匆匆从我们手里买走了一副日食镜，说是要给他老婆看。现在想起还是很感动。我只希望他得以如愿以偿。",
-    googleMapsLink: "https://maps.app.goo.gl/71RS2mV1ARqZ9fE2A?g_st=ic",
+    googleMapsLink: "https://maps.app.goo.gl/a96eBS8DmSsWP1gG7?g_st=ic",
     image: {
       src: `images/photos/07.webp?v=${galleryAssetVersion}`,
       alt: "Photo 07",
@@ -121,7 +121,7 @@ window.locationEntries = [
   {
     cityName: "Waterloo",
     title: "马路边边",
-    description: "最爱去的马路边边，它也没撑过这一年。我们是最后的顾客，我们过了点还在狼吞虎咽。就当是我们把它吃倒闭的吧。",
+    description: "最爱去的马路边边，它也没撑过这一年。我们是最后的顾客，我们过了点儿还在狼吞虎咽。就当是我们把它吃倒闭的吧。",
     googleMapsLink: "https://maps.app.goo.gl/x6umFZYZsuXRzsp36?g_st=ic",
     image: {
       src: `images/photos/10.webp?v=${galleryAssetVersion}`,
@@ -141,7 +141,7 @@ window.locationEntries = [
   {
     cityName: "Waterloo",
     title: "Williams Fresh Cafe",
-    description: "学习之前一定要备好一杯热饮。",
+    description: "学习之前一定要备好一杯热饮，然后再走室内的远路去MC.",
     googleMapsLink: "https://maps.app.goo.gl/kkV7119hWmmEggEJ9?g_st=ic",
     image: {
       src: `images/photos/12.webp?v=${galleryAssetVersion}`,
@@ -181,7 +181,7 @@ window.locationEntries = [
   {
     cityName: "Waterloo",
     title: "806 Grand Banks Dr",
-    description: "这是属于我们所有人的回忆的堡垒。",
+    description: "这里是属于我们所有人的回忆的堡垒。",
     googleMapsLink: "https://maps.app.goo.gl/3KhM8kzX6t6hyFib8?g_st=ic",
     image: {
       src: `images/photos/16.webp?v=${galleryAssetVersion}`,
@@ -212,7 +212,7 @@ window.locationEntries = [
     cityName: "Kitchener",
     title: "Daldongnae",
     description:
-      "每次吃完衣服上都会有散不去的烤肉味，但这不影响人们一去再去。其实，我印象最深的某一个冬日里他们的一碗辣汤。",
+      "每次吃完衣服上都会有散不去的烤肉味，但这不影响我们一去再去。我印象最深的是某一个冬日里他们的一碗辣汤，毕竟每次去都会大点一堆小菜和汤。",
     googleMapsLink: "https://maps.app.goo.gl/35gFmNRhB7mku7sb8?g_st=ic",
     image: {
       src: `images/photos/19.webp?v=${galleryAssetVersion}`,
@@ -222,7 +222,7 @@ window.locationEntries = [
   {
     cityName: "Kitchener",
     title: "Famoso",
-    description: "这家店总是被提及，总是活跃在回忆里，很难相信我其实只去过一次。",
+    description: "这家店总是被提及，总是活跃在回忆里，以至于很难相信我其实只去过一次。",
     googleMapsLink: "https://maps.app.goo.gl/rNJ1naVXFo3u2ai66?g_st=ic",
     image: {
       src: `images/photos/20.webp?v=${galleryAssetVersion}`,
@@ -232,7 +232,7 @@ window.locationEntries = [
   {
     cityName: "Kitchener",
     title: "Midnight Snack",
-    description: "最喜欢的window shopping就是零食的window shopping。不明白为什么每次它都不卖Haribo的可乐软糖。",
+    description: "体验感最好的window shopping就是关于零食的window shopping，虽然我还是不理解为什么这家神奇的午夜零食店就是不卖Haribo的可乐软糖，而且它并不开到午夜。",
     googleMapsLink: "https://maps.app.goo.gl/azLuWx2vBo5EfT5z9?g_st=ic",
     image: {
       src: `images/photos/21.webp?v=${galleryAssetVersion}`,
@@ -242,7 +242,7 @@ window.locationEntries = [
   {
     cityName: "Kitchener",
     title: "Kitchener GO",
-    description: "下了火车第一件事就是找大自然，第二件事就是思考如何把大自然开出这堆车的漩涡。",
+    description: "下了火车第一件事就是找大自然，第二件事就是思考如何把大自然开出这一大堆车的漩涡。",
     googleMapsLink: "https://maps.app.goo.gl/krAukf4MfxQcSrkN7?g_st=ic",
     image: {
       src: `images/photos/22.webp?v=${galleryAssetVersion}`,
@@ -252,7 +252,7 @@ window.locationEntries = [
   {
     cityName: "Kitchener",
     title: "Starbucks",
-    description: "全球范围内我最爱的星巴克儿非它莫属。",
+    description: "全球范围内我最爱的星巴克儿非它莫属。要说缺点，唯一的缺点就是不方便停车。",
     googleMapsLink: "https://maps.app.goo.gl/1jARDUbE1hRkudjb6?g_st=ic",
     image: {
       src: `images/photos/23.webp?v=${galleryAssetVersion}`,
@@ -262,7 +262,7 @@ window.locationEntries = [
   {
     cityName: "Kitchener",
     title: "Don Julio Tacos",
-    description: "只去过一次就成为传奇的塔可店。",
+    description: "只去过一次便成为传奇的塔可店。",
     googleMapsLink: "https://maps.app.goo.gl/CaQ9jsWZz4zTRnKT9?g_st=ic",
     image: {
       src: `images/photos/24.webp?v=${galleryAssetVersion}`,
@@ -272,7 +272,7 @@ window.locationEntries = [
   {
     cityName: "Kitchener",
     title: "Victoria Park",
-    description: "黑夜中的Victoria Park。我的梦里有田野，我的梦里有天空。",
+    description: "黑夜中的Victoria Park. 我的梦里有田野，我的梦里有天空。",
     googleMapsLink: "https://maps.app.goo.gl/ckgpR365iSUPe5Bd8?g_st=ic",
     image: {
       src: `images/photos/25.webp?v=${galleryAssetVersion}`,
@@ -292,7 +292,7 @@ window.locationEntries = [
   {
     cityName: "Kitchener",
     title: "Iron Horse Trail",
-    description: "手机里播着Losing my Religion，跑着跑着就跑到了Victoria Park.",
+    description: "手机里播着Losing my Religion, 跑着跑着就跑到了Victoria Park.",
     googleMapsLink: "https://maps.app.goo.gl/kdFbTsgnogubSS3h8?g_st=ic",
     image: {
       src: `images/photos/27.webp?v=${galleryAssetVersion}`,
@@ -302,7 +302,7 @@ window.locationEntries = [
   {
     cityName: "Kitchener",
     title: "Raddatz Park",
-    description: "你知道家门口的公园叫做Raddatz Park吗？我在这里见过最亮的圆月。",
+    description: "你知道家门口的公园叫做Raddatz Park吗？这里曾出现过最亮的圆月。",
     googleMapsLink: "https://maps.app.goo.gl/LpirQcSwgL7SeJQP8?g_st=ic",
     image: {
       src: `images/photos/28.webp?v=${galleryAssetVersion}`,
@@ -312,7 +312,7 @@ window.locationEntries = [
   {
     cityName: "Kitchener",
     title: "Casa Rugantino",
-    description: "如果有人问我意面里为啥一定要放cappers，我会回答“Casa Rugantino”.",
+    description: "如果有人问我意面里为啥一定要放cappers, 我会回答“Casa Rugantino”.",
     googleMapsLink: "https://maps.app.goo.gl/ZbZSxqJeZVgAeAKP8?g_st=ic",
     image: {
       src: `images/photos/29.webp?v=${galleryAssetVersion}`,
@@ -322,7 +322,7 @@ window.locationEntries = [
   {
     cityName: "Kitchener",
     title: "Costco",
-    description: "每次给大自然加油也不要忘了给肚子加一加油。它需要每周至少一根热狗。",
+    description: "每次给大自然加油也不要忘了给肚子加一加油。它需要每周至少一根热狗，两根是加倍的幸福。",
     googleMapsLink: "https://maps.app.goo.gl/yuHWRVZe5VV8ETGK8?g_st=ic",
     image: {
       src: `images/photos/30.webp?v=${galleryAssetVersion}`,
@@ -352,7 +352,7 @@ window.locationEntries = [
   {
     cityName: "Waterloo",
     title: "McDonald’s",
-    description: "全家人最爱的麦门。双层麦香鱼永远不死。",
+    description: "家人们最爱的麦门。双层麦香鱼永远不死。",
     googleMapsLink: "https://maps.app.goo.gl/UUHeMiCA4jJJ2u816?g_st=ic",
     image: {
       src: `images/photos/33.webp?v=${galleryAssetVersion}`,
@@ -362,7 +362,7 @@ window.locationEntries = [
   {
     cityName: "Waterloo",
     title: "T&T",
-    description: "关注一下樱桃或者荔枝下次什么时候打折。不行就奖励自己几颗椰子水吧。",
+    description: "关注一下樱桃或者荔枝下次什么时候打折，不行就先奖励自己几颗椰子水吧。",
     googleMapsLink: "https://maps.app.goo.gl/SdiizVxq3FnrJEU6A?g_st=ic",
     image: {
       src: `images/photos/34.webp?v=${galleryAssetVersion}`,
@@ -433,8 +433,8 @@ window.locationEntries = [
   {
     cityName: "North York",
     title: "Parking lot",
-    description: "最难找停车位的地方，下了车狂走5分钟。",
-    googleMapsLink: "https://maps.app.goo.gl/UaSnJQn9LPo4JQrT8?g_st=ic",
+    description: "最难找停车位的地方，下车狂走5分钟。",
+    googleMapsLink: "https://maps.app.goo.gl/q7y2XDZ4HiPx2sTCA?g_st=ic",
     image: {
       src: `images/photos/41.webp?v=${galleryAssetVersion}`,
       alt: "Photo 41",
@@ -443,7 +443,7 @@ window.locationEntries = [
   {
     cityName: "North York",
     title: "Washrooms",
-    description: "“Very great washroom, would definitely recommend to anyone else to go visit once”",
+    description: "“Very great washroom, would definitely recommend to anyone else to go visit once” 这条谷歌评论过于真实。",
     googleMapsLink: "https://maps.app.goo.gl/5anUXm3cFCM6D3Rs7?g_st=ic",
     image: {
       src: `images/photos/42.webp?v=${galleryAssetVersion}`,
@@ -484,7 +484,7 @@ window.locationEntries = [
   {
     cityName: "North York",
     title: "Dont Yell At Me",
-    description: "现在我也学会了一耳就听出Stairway to Heaven，但肯定还是没有你快。",
+    description: "现在我也学会了一耳就听出Stairway to Heaven, 但肯定还是没有你快。",
     googleMapsLink: "https://maps.app.goo.gl/o6UHjsPBaKcezeWn6?g_st=ic",
     image: {
       src: `images/photos/46.webp?v=${galleryAssetVersion}`,
@@ -494,7 +494,7 @@ window.locationEntries = [
   {
     cityName: "North York",
     title: "付小姐在成都",
-    description: "跟最爱去的马路边边一样，付小姐也没能撑过这一年。就当是我们把它吃倒闭的吧。",
+    description: "跟最爱去的马路边边一样，付小姐也没能撑过这一年。还是那句话，就当是我们把它吃倒闭的吧。",
     googleMapsLink: "https://maps.app.goo.gl/iW4d7RNmHrM8vcJx5?g_st=ic",
     image: {
       src: `images/photos/47.webp?v=${galleryAssetVersion}`,
@@ -524,7 +524,7 @@ window.locationEntries = [
   {
     cityName: "Scarborough",
     title: "山里屯",
-    description: "十分怀念山里屯儿热气腾腾的筋头巴脑锅。",
+    description: "十分怀念山里屯儿热气腾腾的筋头巴脑锅，还有三个人围着桌子大吃特吃的热闹。",
     googleMapsLink: "https://maps.app.goo.gl/4XKfP57wbWW52Xa77?g_st=ic",
     image: {
       src: `images/photos/50.webp?v=${galleryAssetVersion}`,
@@ -534,7 +534,7 @@ window.locationEntries = [
   {
     cityName: "Scarborough",
     title: "190 Borough Dr",
-    description: "经常在这个停车场里一等就是两个小时，现在想进这个停车场都难了。",
+    description: "从前经常在这个停车场里一等就是俩小时，现在想进这个停车场都难了。",
     googleMapsLink: "https://maps.app.goo.gl/mBxosnL97wgYgNGy5?g_st=ic",
     image: {
       src: `images/photos/51.webp?v=${galleryAssetVersion}`,
@@ -563,23 +563,23 @@ window.locationEntries = [
     },
   },
   {
+    cityName: "Scarborough",
+    title: "大丸",
+    description:
+      "记得第一次吃大丸开的还是租的车，吃到了店里只剩下两个人影。我还记得那是第一次听Stairway to Heaven.",
+    googleMapsLink: "https://maps.app.goo.gl/Ls6GXGY3HYZ3Hn5QA?g_st=ic",
+    image: {
+      src: `images/photos/55.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 54",
+    },
+  },
+  {
     cityName: "North York",
     title: "蟹蟹辣",
     description: "一边吃着螃蟹一边说着螃蟹实在是太腻了。痛并快乐着？",
     googleMapsLink: "https://maps.app.goo.gl/RAgvNCWuJohd19UXA?g_st=ic",
     image: {
       src: `images/photos/54.webp?v=${galleryAssetVersion}`,
-      alt: "Photo 54",
-    },
-  },
-  {
-    cityName: "Scarborough",
-    title: "大丸",
-    description:
-      "第一次吃大丸时开的还是租的车，吃到了店里只剩两个人影。我还记得那是第一次听Stairway to Heaven.",
-    googleMapsLink: "https://maps.app.goo.gl/Ls6GXGY3HYZ3Hn5QA?g_st=ic",
-    image: {
-      src: `images/photos/55.webp?v=${galleryAssetVersion}`,
       alt: "Photo 55",
     },
   },
@@ -587,7 +587,7 @@ window.locationEntries = [
     cityName: "North York",
     title: "青屿治茶",
     description:
-      "Qingyu～～～我永远记不清他们家茶的名字，只记得每一款都很好喝，每天晚上都想喝。哦对，记得有次说是想去挞柠来着，但是没去。现在的我不得不承认挞柠是真的好喝，可惜从来没一起喝过。",
+      "Qingyu～～～我永远记不清他们家茶的名字，只记得每一款都很好喝，每天晚上都想喝。哦对，记得有次说是想去挞柠，但是没去。现在我不得不承认挞柠是真的好喝，只可惜从来没一起喝过。",
     googleMapsLink: "https://maps.app.goo.gl/1fWBEZCX2FSXKRMe8?g_st=ic",
     image: {
       src: `images/photos/56.webp?v=${galleryAssetVersion}`,
@@ -597,7 +597,7 @@ window.locationEntries = [
   {
     cityName: "Toronto",
     title: "Green P",
-    description: "百试百灵，从来不用交停车费的Green P. 不仅如此，方圆几里内还都全是最爱的餐厅。",
+    description: "百试百灵，从来不用交停车费的Green P. 不仅如此，方圆几里内还都是最爱的餐厅。",
     googleMapsLink: "https://maps.app.goo.gl/n9bx3xjDD2S6gmJ19?g_st=ic",
     image: {
       src: `images/photos/57.webp?v=${galleryAssetVersion}`,
@@ -607,7 +607,7 @@ window.locationEntries = [
   {
     cityName: "Toronto",
     title: "Pisac Peruvian Bistro",
-    description: "事后我才发现，就连迈阿密的所谓正宗ceviche都没他们家的好吃。",
+    description: "事后才发现，就连迈阿密所谓正宗的ceviche都没他们家的好吃。",
     googleMapsLink: "https://maps.app.goo.gl/pyqAUo8qWkkoWXnQA?g_st=ic",
     image: {
       src: `images/photos/58.webp?v=${galleryAssetVersion}`,
@@ -649,7 +649,7 @@ window.locationEntries = [
     cityName: "Toronto",
     title: "Antler",
     description:
-      "CHARCUTERIE BOARD!!! 这家真的太好吃了，只不过我们永远不会知道当时坐在旁边那一桌的理科男们究竟在说些什么了。",
+      "CHARCUTERIE BOARD!!! 这家真的太好吃了，只不过人们永远不会知道当时坐在旁边的理科男们究竟在说些什么了。",
     googleMapsLink: "https://maps.app.goo.gl/cbGEe4oKU6eqLxw37?g_st=ic",
     image: {
       src: `images/photos/62.webp?v=${galleryAssetVersion}`,
@@ -659,7 +659,7 @@ window.locationEntries = [
   {
     cityName: "Toronto",
     title: "Shu Cake",
-    description: "那块蛋糕永远会是我吃到过的最好吃的蛋糕。它的丝带依旧保存完好。",
+    description: "那块蛋糕永远会是我吃到过最好吃的蛋糕。它的丝带依旧保存完好。",
     googleMapsLink: "https://maps.app.goo.gl/5n5KEtoSgbrMpVM9A?g_st=ic",
     image: {
       src: `images/photos/63.webp?v=${galleryAssetVersion}`,
@@ -669,7 +669,7 @@ window.locationEntries = [
   {
     cityName: "Toronto",
     title: "Cano",
-    description: "在富人区走了半天，终于找到一家感觉还行的意大利餐馆儿。",
+    description: "在富人区走了半天，终于找到一家感觉还行的意大利餐馆儿。这餐馆旁边儿还有家很接地气的蔬果超市，不知你记不记得。",
     googleMapsLink: "https://maps.app.goo.gl/2Z48BnijGwLfBj1h6?g_st=ic",
     image: {
       src: `images/photos/64.webp?v=${galleryAssetVersion}`,
