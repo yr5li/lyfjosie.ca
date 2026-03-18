@@ -17,7 +17,7 @@
     />
     <link rel="preload" as="image" href="images/sidebar-drawer.webp" fetchpriority="high" />
     <link rel="preload" as="image" href="images/home-sunrise-blur.webp" fetchpriority="high" />
-    <link rel="stylesheet" href="styles.css?v=20260317h" />
+    <link rel="stylesheet" href="styles.css?v=20260317j" />
   </head>
   <body class="sidebar-collapsed sidebar-content-hidden">
     <button class="sidebar-overlay" id="sidebar-overlay" type="button" aria-label="Close sidebar"></button>
@@ -101,7 +101,16 @@
         </section>
 
         <section class="panel-section about-panel" id="about-panel" aria-labelledby="about-tab">
-          <div class="about-blank"></div>
+          <div class="about-note" lang="zh-Hans">
+            <p>欢迎来到lyfjosie.ca</p>
+            <p>这些照片都是我过去这一年间故地重游时拍摄的。</p>
+            <p>
+              希望你愿意相信这个世界上还有一个不值得被你记住的人也会一直默默祝愿你永远安康，永远开心，永远做自己！
+            </p>
+            <p>如果发生任何事情，真心希望有一天我还能帮上忙。</p>
+            <p>不知如何面对是因为始终有在意的人或事。</p>
+            <p>没有什么会被遗忘。这个网站就是永生。</p>
+          </div>
         </section>
       </main>
     </div>
@@ -129,17 +138,11 @@
           <h2 id="detail-title"></h2>
           <p class="detail-description" id="detail-description"></p>
 
-          <dl class="detail-facts">
-            <div>
-              <dt>Coordinates</dt>
-              <dd>
-                <span id="detail-coordinates"></span>
-                <a class="maps-link" id="detail-map-link" href="#" target="_blank" rel="noreferrer">
-                  Open in Google Maps
-                </a>
-              </dd>
-            </div>
-          </dl>
+          <div class="detail-facts">
+            <a class="maps-link" id="detail-map-link" href="#" target="_blank" rel="noreferrer">
+              Open in Google Maps
+            </a>
+          </div>
         </aside>
       </section>
     </div>
@@ -154,7 +157,7 @@
       </section>
     </div>
 
-    <script src="locations.js?v=20260317h"></script>
-    <script src="script.js?v=20260317h"></script>
+    <script src="locations.js?v=20260317j"></script>
+    <script src="script.js?v=20260317j"></script>
   </body>
   </html>

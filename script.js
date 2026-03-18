@@ -1,17 +1,7 @@
 const siteConfig = typeof window.siteConfig === "object" && window.siteConfig ? window.siteConfig : {};
 const baseLocations = Array.isArray(window.locationEntries) ? window.locationEntries : [];
 const galleryImagePreloads = [];
-
-function shuffleLocations(entries) {
-  const shuffled = [...entries];
-  for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const swapIndex = Math.floor(Math.random() * (index + 1));
-    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
-  }
-  return shuffled;
-}
-
-const locations = shuffleLocations(baseLocations);
+const locations = [...baseLocations];
 
 const state = {
   activeTab: "home",
@@ -48,7 +38,6 @@ const detailImage = document.getElementById("detail-image");
 const detailCityName = document.getElementById("detail-city-name");
 const detailTitle = document.getElementById("detail-title");
 const detailDescription = document.getElementById("detail-description");
-const detailCoordinates = document.getElementById("detail-coordinates");
 const detailMapLink = document.getElementById("detail-map-link");
 const imageViewer = document.getElementById("image-viewer");
 const imageViewerClose = document.getElementById("image-viewer-close");
@@ -271,7 +260,6 @@ function renderLocation(index) {
     !detailCityName ||
     !detailTitle ||
     !detailDescription ||
-    !detailCoordinates ||
     !detailMapLink
   ) {
     return;
@@ -283,7 +271,6 @@ function renderLocation(index) {
   detailCityName.textContent = location.cityName;
   detailTitle.textContent = location.title;
   detailDescription.textContent = location.description;
-  detailCoordinates.textContent = location.coordinates;
   detailMapLink.href = location.googleMapsLink;
   if (imageViewerImage) {
     imageViewerImage.src = location.image.src;
