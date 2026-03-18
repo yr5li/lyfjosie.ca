@@ -349,4 +349,166 @@ window.locationEntries = [
       alt: "Photo 32",
     },
   },
+  {
+    cityName: "Waterloo",
+    title: "McDonald’s",
+    description: "全家人最爱的麦门。双层麦香鱼永远不死。",
+    googleMapsLink: "https://maps.app.goo.gl/UUHeMiCA4jJJ2u816?g_st=ic",
+    image: {
+      src: `images/photos/33.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 33",
+    },
+  },
+  {
+    cityName: "Waterloo",
+    title: "T&T",
+    description: "关注一下樱桃或者荔枝下次什么时候打折。",
+    googleMapsLink: "https://maps.app.goo.gl/SdiizVxq3FnrJEU6A?g_st=ic",
+    image: {
+      src: `images/photos/34.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 34",
+    },
+  },
+  {
+    cityName: "Waterloo",
+    title: `43°27'25.4"N 80°31'57.4"W`,
+    description:
+      "还记得这个路口吗？这次我亲测了，我在那个路口前面站了10分钟，它的绿灯确实是永远不会变的。谁不希望拥有永不变红的绿灯呢？",
+    googleMapsLink: "https://maps.app.goo.gl/cdHtUaSx5wjtwEFz7?g_st=ic",
+    image: {
+      src: `images/photos/35.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 35",
+    },
+  },
+  {
+    cityName: "Kitchener",
+    title: "Tim Hortons",
+    description: "Hi, can I have a large steeped tea?",
+    googleMapsLink: "https://maps.app.goo.gl/iTVxHNnjpVUVGVC86?g_st=ic",
+    image: {
+      src: `images/photos/36.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 36",
+    },
+  },
+  {
+    cityName: "Kitchener",
+    title: `43°26'09.7"N 80°29'51.0"W`,
+    description: "标记一下曾经被撞坏的电线杆。",
+    googleMapsLink: "https://maps.app.goo.gl/pUHP4Y339gmavWBo8?g_st=ic",
+    image: {
+      src: `images/photos/37.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 37",
+    },
+  },
+  {
+    cityName: "Cambridge",
+    title: "Blackshop Restaurant",
+    description: "二月十四日的晚餐真的很好吃。",
+    googleMapsLink: "https://maps.app.goo.gl/gbPAFwaUEAJ13JCs9?g_st=ic",
+    image: {
+      src: `images/photos/38.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 38",
+    },
+  },
+  {
+    cityName: "Mississauga",
+    title: "989 Derry Rd E",
+    description: "每一场考试都变成了珍贵的回忆。",
+    googleMapsLink: "https://maps.app.goo.gl/kfnrU4PYsdvGQcfm6?g_st=ic",
+    image: {
+      src: `images/photos/39.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 39",
+    },
+  },
+  {
+    cityName: "Etobicoke",
+    title: "Centennial Park",
+    description: "这里的樱花比任何地方的都要更好看。",
+    googleMapsLink: "https://maps.app.goo.gl/BDyLoSJS9e4ZPs9a9?g_st=ic",
+    image: {
+      src: `images/photos/40.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 40",
+    },
+  },
+  {
+    cityName: "North York",
+    title: "Parking lot",
+    description: "最难找停车位的地方，下了车狂走5分钟。",
+    googleMapsLink: "https://maps.app.goo.gl/UaSnJQn9LPo4JQrT8?g_st=ic",
+    image: {
+      src: `images/photos/41.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 41",
+    },
+  },
+  {
+    cityName: "North York",
+    title: "Washrooms",
+    description: "“Very great washroom, would definitely recommend to anyone else to go visit once”",
+    googleMapsLink: "https://maps.app.goo.gl/5anUXm3cFCM6D3Rs7?g_st=ic",
+    image: {
+      src: `images/photos/42.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 42",
+    },
+  },
+  {
+    cityName: "North York",
+    title: "Prada",
+    description:
+      "现在好像理解了“奢侈品重在心意”这样一个道理。我还是很后悔当天没有买下Acne Studios的那一件衣物。",
+    googleMapsLink: "https://maps.app.goo.gl/NUS2da4vBtRw3ogZA?g_st=ic",
+    image: {
+      src: `images/photos/43.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 43",
+    },
+  },
+  {
+    cityName: "North York",
+    title: "Yu Seafood",
+    description: "笼子里的乳鸽飞走了。",
+    googleMapsLink: "https://maps.app.goo.gl/u6mSRo2orHxQ7fho8?g_st=ic",
+    image: {
+      src: `images/photos/44.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 44",
+    },
+  },
+  {
+    cityName: "North York",
+    title: "Josie's Sports Bar & Cafe",
+    description: "这家属于你的咖啡馆，最后去了吗？",
+    googleMapsLink: "https://maps.app.goo.gl/jVpTVeeCq6XKcXTy5?g_st=ic",
+    image: {
+      src: `images/photos/45.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 45",
+    },
+  },
+  {
+    cityName: "North York",
+    title: "Dont Yell At Me",
+    description: "现在我也学会了一耳就听出Stairway to Heaven，但肯定还是没有你快。",
+    googleMapsLink: "https://maps.app.goo.gl/o6UHjsPBaKcezeWn6?g_st=ic",
+    image: {
+      src: `images/photos/46.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 46",
+    },
+  },
+  {
+    cityName: "North York",
+    title: "付小姐在成都",
+    description: "跟最爱去的马路边边一样，付小姐也没能撑过这一年。就当是我们把它吃倒闭的吧。",
+    googleMapsLink: "https://maps.app.goo.gl/iW4d7RNmHrM8vcJx5?g_st=ic",
+    image: {
+      src: `images/photos/47.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 47",
+    },
+  },
+  {
+    cityName: "Markham",
+    title: "凤庭",
+    description: "到现在都解释不清为什么这家早茶店就是比别家的好吃。",
+    googleMapsLink: "https://maps.app.goo.gl/bCvsrzUimhcQFmnJA?g_st=ic",
+    image: {
+      src: `images/photos/48.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 48",
+    },
+  },
 ];
