@@ -1,7 +1,17 @@
 const siteConfig = typeof window.siteConfig === "object" && window.siteConfig ? window.siteConfig : {};
 const baseLocations = Array.isArray(window.locationEntries) ? window.locationEntries : [];
 const galleryImagePreloads = [];
-const locations = [...baseLocations];
+
+function shuffleLocations(entries) {
+  const shuffled = [...entries];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+  return shuffled;
+}
+
+const locations = shuffleLocations(baseLocations);
 
 const state = {
   activeTab: "home",

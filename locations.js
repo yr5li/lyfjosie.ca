@@ -23,7 +23,7 @@ window.siteConfig = {
   },
 };
 
-const galleryAssetVersion = "20260317e";
+const galleryAssetVersion = "20260318f";
 
 // Gallery and lightbox order follow this array from top to bottom.
 window.locationEntries = [
@@ -362,7 +362,7 @@ window.locationEntries = [
   {
     cityName: "Waterloo",
     title: "T&T",
-    description: "关注一下樱桃或者荔枝下次什么时候打折。",
+    description: "关注一下樱桃或者荔枝下次什么时候打折。不行就奖励自己几颗椰子水吧。",
     googleMapsLink: "https://maps.app.goo.gl/SdiizVxq3FnrJEU6A?g_st=ic",
     image: {
       src: `images/photos/34.webp?v=${galleryAssetVersion}`,
@@ -509,6 +509,171 @@ window.locationEntries = [
     image: {
       src: `images/photos/48.webp?v=${galleryAssetVersion}`,
       alt: "Photo 48",
+    },
+  },
+  {
+    cityName: "Markham",
+    title: "大多百太古广场分店",
+    description: "我偷偷去大多百又买了一顶同样的帽子，这次是黑色的。咸鱼帽最棒～",
+    googleMapsLink: "https://maps.app.goo.gl/8t78JdNXQXWHR1296?g_st=ic",
+    image: {
+      src: `images/photos/49.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 49",
+    },
+  },
+  {
+    cityName: "Scarborough",
+    title: "山里屯",
+    description: "十分怀念山里屯儿热气腾腾的筋头巴脑锅。",
+    googleMapsLink: "https://maps.app.goo.gl/4XKfP57wbWW52Xa77?g_st=ic",
+    image: {
+      src: `images/photos/50.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 50",
+    },
+  },
+  {
+    cityName: "Scarborough",
+    title: "190 Borough Dr",
+    description: "经常在这个停车场里一等就是两个小时，现在想进这个停车场都难了。",
+    googleMapsLink: "https://maps.app.goo.gl/mBxosnL97wgYgNGy5?g_st=ic",
+    image: {
+      src: `images/photos/51.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 51",
+    },
+  },
+  {
+    cityName: "Toronto",
+    title: "ON-401",
+    description:
+      "今天开车听些什么呢？脆梅？伤心欲绝？寂寞夏日？枪花？算了我还是随便放一张许巍的专辑吧。让我如何歌唱你？",
+    googleMapsLink: "https://maps.app.goo.gl/JPdB33EjZCcSJkib8?g_st=ic",
+    image: {
+      src: `images/photos/52.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 52",
+    },
+  },
+  {
+    cityName: "Toronto",
+    title: "ON-401",
+    description: "快看！鱼头！",
+    googleMapsLink: "https://maps.app.goo.gl/JPdB33EjZCcSJkib8?g_st=ic",
+    image: {
+      src: `images/photos/53.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 53",
+    },
+  },
+  {
+    cityName: "North York",
+    title: "蟹蟹辣",
+    description: "一边吃着螃蟹一边说着螃蟹实在是太腻了。痛并快乐着？",
+    googleMapsLink: "https://maps.app.goo.gl/RAgvNCWuJohd19UXA?g_st=ic",
+    image: {
+      src: `images/photos/54.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 54",
+    },
+  },
+  {
+    cityName: "Scarborough",
+    title: "大丸",
+    description:
+      "第一次吃大丸时开的还是租的车，吃到了店里只剩两个人影。我还记得那是第一次听Stairway to Heaven.",
+    googleMapsLink: "https://maps.app.goo.gl/Ls6GXGY3HYZ3Hn5QA?g_st=ic",
+    image: {
+      src: `images/photos/55.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 55",
+    },
+  },
+  {
+    cityName: "North York",
+    title: "青屿治茶",
+    description:
+      "Qingyu～～～我永远记不清他们家茶的名字，只记得每一款都很好喝，每天晚上都想喝。哦对，记得有次说是想去挞柠来着，但是没去。现在的我不得不承认挞柠是真的好喝，可惜从来没一起喝过。",
+    googleMapsLink: "https://maps.app.goo.gl/1fWBEZCX2FSXKRMe8?g_st=ic",
+    image: {
+      src: `images/photos/56.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 56",
+    },
+  },
+  {
+    cityName: "Toronto",
+    title: "Green P",
+    description: "百试百灵，从来不用交停车费的Green P. 不仅如此，方圆几里内还都全是最爱的餐厅。",
+    googleMapsLink: "https://maps.app.goo.gl/n9bx3xjDD2S6gmJ19?g_st=ic",
+    image: {
+      src: `images/photos/57.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 57",
+    },
+  },
+  {
+    cityName: "Toronto",
+    title: "Pisac Peruvian Bistro",
+    description: "事后我才发现，就连迈阿密的所谓正宗ceviche都没他们家的好吃。",
+    googleMapsLink: "https://maps.app.goo.gl/pyqAUo8qWkkoWXnQA?g_st=ic",
+    image: {
+      src: `images/photos/58.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 58",
+    },
+  },
+  {
+    cityName: "Toronto",
+    title: "Kingyo",
+    description: "Qingyu～～～又想吃生鱼了吗？",
+    googleMapsLink: "https://maps.app.goo.gl/qn5Rh4zhtqfWEFdL8?g_st=ic",
+    image: {
+      src: `images/photos/59.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 59",
+    },
+  },
+  {
+    cityName: "Toronto",
+    title: "260 Queens Quay W.",
+    description: "哈哈哈哈哈哈哈哈你快看！又有个傻B把车开到铁路上了！",
+    googleMapsLink: "https://maps.app.goo.gl/6qebKvfxpGjkKSqc6?g_st=ic",
+    image: {
+      src: `images/photos/60.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 60",
+    },
+  },
+  {
+    cityName: "Toronto",
+    title: "Amano Trattoria",
+    description:
+      "CHARCUTERIE BOARD!!! 感谢他们生日额外赠送的小蛋糕，但怎么都不会比The Division Bell的蛋糕好。",
+    googleMapsLink: "https://maps.app.goo.gl/4RbRw4176fqLR66B6?g_st=ic",
+    image: {
+      src: `images/photos/61.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 61",
+    },
+  },
+  {
+    cityName: "Toronto",
+    title: "Antler",
+    description:
+      "CHARCUTERIE BOARD!!! 这家真的太好吃了，只不过我们永远不会知道当时坐在旁边那一桌的理科男们究竟在说些什么了。",
+    googleMapsLink: "https://maps.app.goo.gl/cbGEe4oKU6eqLxw37?g_st=ic",
+    image: {
+      src: `images/photos/62.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 62",
+    },
+  },
+  {
+    cityName: "Toronto",
+    title: "Shu Cake",
+    description: "那块蛋糕永远会是我吃到过的最好吃的蛋糕。它的丝带依旧保存完好。",
+    googleMapsLink: "https://maps.app.goo.gl/5n5KEtoSgbrMpVM9A?g_st=ic",
+    image: {
+      src: `images/photos/63.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 63",
+    },
+  },
+  {
+    cityName: "Toronto",
+    title: "Cano",
+    description: "在富人区走了半天，终于找到一家感觉还行的意大利餐馆儿。",
+    googleMapsLink: "https://maps.app.goo.gl/2Z48BnijGwLfBj1h6?g_st=ic",
+    image: {
+      src: `images/photos/64.webp?v=${galleryAssetVersion}`,
+      alt: "Photo 64",
     },
   },
 ];
