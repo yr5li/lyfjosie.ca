@@ -573,7 +573,7 @@ body:not(.sidebar-collapsed) .sidebar-toggle.has-custom-image span {
   width: min(100%, 720px);
   margin: 0 auto;
   padding: 28px 24px;
-  color: rgba(95, 48, 44, 0.11);
+  color: rgba(95, 48, 44, 0.035);
   font-size: clamp(0.98rem, 1.6vw, 1.12rem);
   line-height: 1.95;
   letter-spacing: 0.01em;
@@ -986,13 +986,13 @@ body:not(.sidebar-collapsed) .sidebar-toggle.has-custom-image span {
   .lightbox-dialog {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 18px;
-    width: calc(100vw - 16px);
-    height: calc(100dvh - 16px);
-    margin: 8px;
-    padding: 56px 12px 12px;
+    gap: 12px;
+    width: calc(100vw - 8px);
+    height: calc(100dvh - 8px);
+    margin: 4px;
+    padding: 54px 8px 8px;
     border: 1px solid rgba(255, 255, 255, 0.75);
-    border-radius: 28px;
+    border-radius: 24px;
     background: rgba(255, 249, 243, 0.97);
   }
 
@@ -1009,7 +1009,7 @@ body:not(.sidebar-collapsed) .sidebar-toggle.has-custom-image span {
 
   .lightbox-media-wrap {
     min-height: min(50vh, 420px);
-    padding: 60px 12px 12px;
+    padding: 52px 4px 4px;
   }
 
   .lightbox-nav-prev {
@@ -1028,7 +1028,7 @@ body:not(.sidebar-collapsed) .sidebar-toggle.has-custom-image span {
   }
 
   .lightbox-image {
-    max-height: min(50vh, 420px);
+    max-height: min(54vh, 440px);
     border-radius: 18px;
   }
 

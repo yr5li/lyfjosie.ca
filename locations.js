@@ -262,7 +262,7 @@ window.locationEntries = [
   {
     cityName: "Kitchener",
     title: "Don Julio Tacos",
-    description: "只去过一次就成为传奇的塔可点。",
+    description: "只去过一次就成为传奇的塔可店。",
     googleMapsLink: "https://maps.app.goo.gl/CaQ9jsWZz4zTRnKT9?g_st=ic",
     image: {
       src: `images/photos/24.webp?v=${galleryAssetVersion}`,
